@@ -1,0 +1,40 @@
+#include<stdio.h>
+#define MAX 100
+#include <math.h>
+
+int function(int num)
+{
+   int count;
+   int a=num;
+   int b=num;
+   int sum,k;
+   while(a!=0)
+   {
+       count++;
+       a=a/10;
+   }
+   while(b!=0)
+   {
+        k=b%10;
+        sum=sum+pow(k,count);
+       b=b/10;
+   }
+   if(sum==num)
+   
+       return 1;
+    else
+    return 0;
+ 
+}
+
+
+void main()
+{   
+    int num;
+    scanf("%d",&num);
+    int out=function(num);
+    printf("%d",out);
+}
+
+
+Write a program to read and check if the number is an Amstrong number or not. If it is Amstrong number, return 1, else return 0;
